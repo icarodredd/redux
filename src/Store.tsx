@@ -19,5 +19,11 @@ const reducer = (state = initalState, action: any) => {
     case "account/requestLoan":
       if (state.loan < 0) return state;
       return { ...state, loan: state.loan + action.payload };
+    case "account/payLoan":
+      if (state.loan < 0)
+        return { ...state, loan: 0, balance: state.balance - state.loan };
+      break;
+    default:
+      return state;
   }
 };
