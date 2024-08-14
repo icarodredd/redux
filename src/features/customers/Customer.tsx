@@ -4,7 +4,7 @@ function Customer() {
 
   console.log(data);
 
-  return <h2>👋 Welcome, %NAME%</h2>;
+  return <h2>👋 Welcome, {data.fullName}</h2>;
 }
 
 export default Customer;
