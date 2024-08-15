@@ -14,7 +14,6 @@ function App() {
         <CreateCustomer />
       ) : (
         <>
-          {" "}
           <Customer />
           <AccountOperations />
           <BalanceDisplay />{" "}
