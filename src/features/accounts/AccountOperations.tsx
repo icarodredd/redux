@@ -14,6 +14,7 @@ function AccountOperations() {
   function handleDeposit() {
     if (!depositAmount) return;
     dispatch(deposit(parseFloat(depositAmount)));
+    setDepositAmount("");
   }
 
   function handleWithdrawal() {}
