@@ -16,7 +16,7 @@ function AccountOperations() {
   function handleDeposit() {
     if (!depositAmount) return;
 
-    const thunk = deposit(depositAmount, currency);
+    const thunk = deposit(parseFloat(depositAmount), currency);
     if (typeof thunk === "function") {
       thunk(dispatch);
     } else {
