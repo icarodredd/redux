@@ -13,7 +13,8 @@ function AccountOperations() {
 
   function handleDeposit() {
     if (!depositAmount) return;
-    dispatch(deposit(parseFloat(depositAmount)));
+    dispatch(deposit(depositAmount, currency));
+    setCurrency("USD");
     setDepositAmount("");
   }
 
@@ -26,7 +27,7 @@ function AccountOperations() {
   function handleRequestLoan() {
     if (!loanAmount || !loanPurpose) return;
     dispatch(requestLoan(parseFloat(loanAmount)));
-    dispatch(deposit(parseFloat(loanAmount)));
+    dispatch(deposit(parseFloat(loanAmount), currency));
     setLoanAmount("");
     setLoanPurpose("");
   }
